@@ -526,5 +526,58 @@ If $|X| = -1/h$ $\implies$ only the zero vector in $T_X$
 
 #### Polar Coordinates in configuration space, new variables $(v_r, v_\theta)$ 
 
-$V = v_r\begin{pmatrix} \cos\theta \\ \sin \theta\end{pmatrix} + v_\theta\begin{pmatrix} - \sin \theta \\ \cos\theta \end{pmatrix}$ 
+##### $V = v_r\begin{pmatrix} \cos\theta \\ \sin \theta\end{pmatrix} + v_\theta\begin{pmatrix} - \sin \theta \\ \cos\theta \end{pmatrix}$ 
 
+##### $V = X' = r'\begin{pmatrix} \cos\theta \\ \sin \theta \end{pmatrix} + r\theta'\begin{pmatrix} -\sin \theta \\ \cos\theta \end{pmatrix}$ 
+
+###### $r' = v_r$, $\theta' = v_\theta/r$ 
+
+Differentiating:
+
+$-\frac{1}{r^2}\begin{pmatrix}\cos\theta \\ \sin\theta \end{pmatrix}$ $= $ $-\frac{X}{|X|^3}$ $= $ $V' = $ $(v_r' - v_\theta \theta')\begin{pmatrix} \cos\theta \\ \sin \theta \end{pmatrix} + (\frac{v_rv_\theta}{r}+v_\theta')\begin{pmatrix} -\sin \theta \\ \cos \theta \end{pmatrix}$ 
+
+Proving the differentiating part, the right most side:
+
+$\frac{\partial V}{\partial r} = r''(\cos \theta, \sin \theta) + \theta'(-\sin \theta, \cos \theta)$ 
+
+$\frac{\partial V}{\partial \theta}= r'(-\sin \theta, \cos \theta) + r\theta'(-\cos \theta, -\sin \theta) + r\theta''(-\sin \theta, \cos \theta)$  
+
+$v_r' = r'' \cdot r'$ (w.r.t $t$)
+
+$v_{\theta }' = r'\theta' + r\theta'' \cdot \theta'$ (w.r.t $t$)
+
+so in front of $(\cos \theta, \sin \theta)$ we have:
+
+$r''r' - r\theta' \theta' = v_r' - v_\theta \theta'$
+
+in front of $(-\sin \theta, \cos \theta)$
+
+$r'\theta' + r' \theta'  + r\theta'' \theta' = v_rv_\theta/r + v_\theta'$
+
+Therefore, in the new coordinates $(r, \theta, v_r, v_\theta)$ the system becomes
+
+##### $r' = v_r \\ \theta' = v_\theta/r \\ v_r' = -\frac{1}{r^2}+ \frac{v_\theta^2}{r} \\ v_{\theta}' = -\frac{v_rv_\theta}{r}$
+
+Explanation:
+
+equating the left most side of the equality above with the right most side, we must have
+
+$v_rv_\theta/ r + v_\theta' = 0$ and $v_r' - v_\theta \theta' = -\frac{1}{r^2}$ 
+
+In these coordinates, total energy is given by
+
+##### $ E(v_r, v_\theta) = \frac{1}{2}(v_r^2 + v_\theta^2)- \frac{1}{r} = h$  
+
+Explanation:
+
+From page 286:
+
+$E(X,V) = \frac{1}{2}|V|^2 - \frac{1}{|X|}$ 
+
+we have $|X| = r$, and $|V|^2 = v_r^2\cos^2\theta + v_r^2 \sin^2\theta + v_\theta^2(\sin^2\theta + \cos^2\theta)$
+
+angular momentum, $l = mr^2\theta'$, now equals, with $m =1$
+
+$l = rv_\theta$ 
+
+##### 
