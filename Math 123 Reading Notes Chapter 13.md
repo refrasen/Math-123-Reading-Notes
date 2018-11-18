@@ -656,4 +656,412 @@ Suppose $h < 0$ and $l^2 < -1/2h$. Then $\Sigma_{h,l} \sub P$ is a two dimension
 
 Proof:
 
-Just read in page 289
+Just read in page 289:
+
+gist: $v_{\theta}$ is constant $= l/r$ for all vectors in $T_X \cap \Sigma_{h,l}$ for any $X$ in the annulus including boundary
+
+so vectors move in the same direction: counterclockwise or clockwise
+
+on the boundary, $v_r = 0 \implies r' = 0$
+
+and there are two vectors for an $X$ in the interior: $v_r^\pm = \pm \frac{1}{r}\sqrt{2hr^2 + 2r - l^2}$, $v_\theta = l/r$ 
+
+We can think of $\Sigma_{h,l}$ as being given by a pair of graphs over $A_{\alpha, \beta}$:
+
+* positive graph given by $v_r^+$ ($r$ tending towards $\beta$)
+* negative given by $v_r^-$ ($r$ tending towards $\alpha$)
+
+that are joined together along the boundary circles $r = \alpha, r = \beta$ 
+
+**WARNING** $r = \alpha$ and $r = \beta$ are NOT closed orbits:
+
+in this case, wrong to think that just because $r' = 0$, the radius ceases to change
+
+(when our only space has a fixed $r$ like in a previous case, that is different)
+
+when $r = \alpha$
+
+$v_r' = -\frac{1}{\alpha^2} + \frac{v_\theta^2}{\alpha}= \frac{1}{\alpha^3}(-\alpha + l^2)$
+
+The right hand side of equation $(*)$ vanishes at $\alpha$, so
+
+$2h\alpha^2 + 2\alpha - l^2 = 0$
+
+so $-\alpha + l^2 = (2h\alpha + 1)\alpha$
+
+since $\alpha < -1/2h$, $\implies$ $r'' = v_r' > 0$ when $r = \alpha$
+
+so the $r $- coordinate of solutions in $\Sigma_{h,l}$ reaches a minimum when the curve meets $r = \alpha$
+
+and since $r'' > 0$, we have that $r' = 0$ at $\alpha$ is going to increase, so $r$ increases
+
+similarly, along $r = \beta$, $r$-coordinate reaches a maximum
+
+Remarks:
+
+* curves in $A_{\alpha, \beta}$ are preserved by rotations about the origin, so all these solutions behave symmetrically
+* each of these solutions lie on a closed orbit that traces out an ellipse in the configuration space
+
+### 13.5 Kepler's First Law
+
+Recall that we have two constants of the motion for the Newtonian central force system:
+
+$h, l$ (Total Energy, angular momentum)
+
+When $l = 0$, we obtain collision-ejection solutions
+
+So **we assume $l \neq 0$**
+
+We will show in polar coordinates in configuration space, a solution with nonzero angular momentum lies on a curve given by 
+
+$r(1 + \epsilon \cos\theta) = \kappa$, where $\epsilon$ and $\kappa$ are constants
+
+* this equation defines a conic section
+* to see this, rewrite in Cartesian coordinates
+* This fact is known as **kepler's first law** 
+
+To prove:
+
+1. recall that $l = r^2\theta'$ is constant and nonzero
+2. $\implies$ the sign of $\theta'$ remains constant along the solution curve
+3. $\implies$ $\theta$ is always increasing or always decreasing in time
+4. $\implies$ we may regard $r$ as a function of $\theta$ along the curve
+
+Let $W(t) = 1/r(t)$; Then $W$ is also a function of $\theta$. 
+
+Note: $W = -U$, as $U = -1/|X| = -1/r(t)$
+
+#### Proposition: Formula for Kinetic Energy
+
+$K = \frac{l^2}{2}((\frac{dW}{d\theta})^2 + W^2)$
+
+Proof:
+
+In polar coordinates:
+
+$K = \frac{1}{2}((r')^2 + (r\theta')^2)$
+
+since $r = 1/W$:
+
+$r' = \frac{-1}{W^2}\frac{dW}{d\theta}\theta' = -l\frac{dW}{d\theta}$ 
+
+Finally:
+
+$r\theta' = \frac{l}{r} = lW$ 
+
+Substitution into formula for $K$ then completes the proof.
+
+---
+
+#### Finding a Differential equation relating $W$ and $\theta$ along the solution curve
+
+Observe: $K = E - U = E + W$
+
+From the proposition:
+
+Equation $(**)$: $(\frac{dW}{d\theta})^2 + W^2 = \frac{2}{l^2}(E + W)$ 
+
+Differentiating both sides w.r.t. $\theta$, $2\frac{dW}{d\theta}*\frac{d^2W}{d\theta^2} + 2W*\frac{dW}{d\theta}$$=$ $ \frac{2}{l^2}(\frac{dE}{d\theta} + \frac{dW}{d\theta})$ 
+
+dividing by $2dW/d\theta$ and using $dE/d\theta = 0$ (conservation of energy)
+
+$\implies$ $\frac{d^2W}{d\theta^2} + W = \frac{1}{l^2}$ 
+
+$\frac{1}{l^2}$ is a constant
+
+Note:
+
+* this equation is just the equation for a harmonic oscillator with constant forcing $1/l^2$ 
+* $mx'' + kx = F$, we have $m = 1$ , $k = 1$ , $F = \frac{1}{l^2}$ ?
+
+From Elementary Calculus:
+
+solutions of this second order equation:
+
+$W(\theta) = \frac{1}{l^2} + A \cos \theta + B \sin \theta$
+
+$\equiv$ $W(\theta) = \frac{1}{l^2} + C \cos(\theta + \theta_0)$
+
+where $C, \theta_0$ are constant related to $A$ and $B$ 
+
+Substituting this back into Equation $(**)$ and solve for $C$, at $\theta + \theta_0 = \pi/2$ 
+
+$C = \pm \frac{1}{l^2}\sqrt{1 + 2l^2E}$ 
+
+Inserting this into the preceding solution:
+
+$W(\theta) = \frac{1}{l^2}(1 \pm \sqrt{1 + 2El^2}\cos(\theta + \theta_0))$ 
+
+No need to consider both signs in front of radical because:
+
+$\cos(\theta + \theta_0 + \pi) = -\cos(\theta + \theta_0)$ 
+
+Moreover, changing $\theta$ to $\theta - \theta_0$ we can put any particular solution into the form
+
+$\frac{1}{l^2}(1 + \sqrt{1 + 2El^2}\cos\theta)$ 
+
+*Recall from analytic geometry* that the equation of a conic in polar coordinates is
+
+$\frac{1}{r} = \frac{1}{\kappa}(1 + \epsilon \cos \theta)$
+
+$\kappa$ is the **lactus rectum**
+
+$\epsilon \geq 0$ is the **eccentricity** of the conic
+
+(if i were me, and I am, I'd look at the multivariable calculus section of this)
+
+The origin is a focus
+
+three cases, $\epsilon > 1, \epsilon = 1, \epsilon < 1$ correspond resp. to
+
+1. hyperbola
+2. parabola
+3. ellipse
+
+$\epsilon = 0$ is a circle (which is an ellipse)
+
+In our case we have:
+
+$\epsilon = \sqrt{1 + 2El^2}$ 
+
+so the three different cases occur when $E > 0, E = 0, E < 0$ 
+
+We have now proven the following:
+
+#### Theorem (Kepler's First Law)
+
+The path of a particle moving under the influence of Newton's law of gravitation is a conic of eccentricity
+
+$\sqrt{1 + 2El^2}$ 
+
+This path lies along a hyperbola, parabola, or ellipse according to whether $E > 0, E = 0, E < 0$ 
+
+### 13.6 The Two-Body Problem
+
+* assume we have two masses that move in space according to their mutual gravitational attraction
+* $X_1, X_2$ denote the positions of particles of mass $m_1, m_2$ in $\R^3$ 
+  * $X_1 = (x_1^1, x_2^1, x_3^1)$, $X_2 = (x_1^2, x_2^2, x_3^2)$ 
+* From Newton's law of gravitation, the equations of motion are:
+  * $m_1X_1'' = gm_1m_2 \frac{X_2 - X_1}{|X_2 - X_1|^3}$ 
+  * $m_2X_2'' = gm_1m_2\frac{X_1 - X_2}{|X_1 - X_2|^3}$ 
+
+Examine these equations from the perspective of a viewer on the first mass:
+
+Let $X = X_2 - X_1$
+
+We then have
+
+$X'' = X_2'' - X_1''$
+
+$= gm_1\frac{X_1 - X_2}{|X_1-X_2|^3} - gm_2\frac{X_2 - X_1}{|X_1 - X_2|^3}$ 
+
+$ = -g(m_1 + m_2)\frac{X}{|X|^3}$ 
+
+But this is just the Newtonian central force problem, with a different choice of constants
+
+---
+
+To solve the two-body problem
+
+1. determine the solution of $X(t)$ of this central force problem
+   1. this then determines the right side of the differential equations for both $X_1$ and $X_2$ as function so f$t$ so we may simply integrate twice to find $X_1(t)$ and $X_2(t)$ 
+
+Another way to reduce the two-body problem to the Newtonian central force is as follows:
+
+##### center of mass
+
+The center of mass of the two-body system is the vector
+
+$X_c = \frac{m_1X_1 + m_2X_2}{m_1 + m_2}$ 
+
+A computation shows: $X_c'' = 0$ 
+
+Therefore: $X_c = At + B$, where $A, B$ are fixed vectors in $\R^3$ 
+
+$\implies$ the center of mass of the system moves along a straight line with constant velocity
+
+Now, we change coordinates so that the origin of the system is located at $X_c$ 
+
+$Y_j = X_j - X_c$ for $j = 1, 2$ 
+
+so we have $m_1Y_1(t) + m_2Y_2(t) = 0$ for all $t$
+
+Rewriting the diff. eqn. in terms of the $Y_j$:
+
+$Y_1'' = -\frac{gm^3_2}{(m_1+m_2)^3}\frac{Y_1}{|Y_1|^3}$ 
+
+$Y_2'' = -\frac{gm_1^3}{(m_1 + m_2)^3}\frac{Y_2}{|Y_2|^3}$ 
+
+which yields a pair of central force problems
+
+since we know that
+
+$m_1Y_1(t) = -m_2Y_2(t)$, we only need to solve one of them
+
+### 13.7 Blowing Up the Singularity
+
+The singularity at the origin in the Newtonian central force problem is the first time we have encountered such a situation.
+
+Such singularities can sometimes be removed by a combination of
+
+1. judicious change of variables
+2. time scalings
+
+In the Newtonian central force system, this may be achieved using a change of variables introduced by McGhee
+
+1. Introduce $u_r = r^{1/2}v_r, u_\theta = r^{1/2}v_\theta$ 
+
+2. The new system:
+
+   1. $r' = r^{-1/2}u_r \\ \theta' = r^{-3/2}u_\theta \\ r^{-3/2}(\frac{1}{2}u_r^2 + u_\theta^2 -1)\\ u_\theta' = r^{-3/2}(-\frac{1}{2}u_ru_\theta)$ 
+   2. we still have singularity at origin, but the last three equations are multiplied by $r^{-3/2}$ 
+   3. We multiply the vector field by $r^{3/2}$ 
+   4. The solution curves remain the same, but are parametrized differently 
+
+3. Introduce a new time variable $\tau$: $\frac{dt}{d\tau} = r^{3/2}$ 
+
+4. By chain rule: $\frac{dr}{d\tau} = \frac{dr}{dt}\frac{dt}{d\tau}$ $= r' * r^{3/2}$ 
+
+   1. and similarly for other variables
+
+5. New system with new time scale
+
+   1. $\dot r = ru_r \\ \dot \theta = u_\theta \\ \dot u_r = \frac{1}2 u_r^2 + u_\theta^2 - 1 \\ \dot u_\theta = -\frac{1}2 u_r u_\theta$ 
+
+   where the dot indicates differentiation w.r.t. $\tau$ 
+
+Note:
+
+when $r$ is small, $dt/d\tau$ is close to zero, so "time" $\tau$ moves much more slowly than time $t$ near the origin
+
+* for one unit of time $\tau$ moved near origin, not as much time $t$ passes
+* so it's like moving with unit $\tau$ is moving through $t$ in slow motion
+
+The system no longer has a singularity at the origin.
+
+we have "blown up" the singularity and replaced it with a new set given by $r = 0$ with $\theta, u_r, u_\theta$ arbitrary
+
+On this set, the system is well defined.
+
+the set with $r = 0$, $\dot r = 0$ is invariant, and so we have introduced a fictitious flow on $r = 0$ 
+
+Solutions on $r = 0$  mean nothing in terms of the real system, but by continuity of solutions, they can tell us a lot about how solutions behave near the singularity
+
+---
+
+We don't need to worry about all of $r = 0$ because the total energy relation in the new variables becomes
+
+$hr = \frac{1}{2}(u_r^2 + u_\theta^2)-1$ 
+
+On $r = 0$ only the subset $\Lambda$ defined by 
+
+$u_r^2 + u_\theta^2 = 2, \theta$ arbitrary
+
+matters
+
+##### collision surface $\Lambda$ 
+
+See above, it is the subset such that $u_r^2 + u_\theta^2 = 2$, or the variables $u_r, u_\theta, \theta$ such that $r = 0$ and the total energy relation is satisfied
+
+How solutions behave on $\Lambda$ dictate how solutions move near the singularity since any solution that approaches $r = 0$ necessarily comes close to $\Lambda$ in our new coordinates
+
+Note:
+
+$\Lambda$ is a two-dim torus:
+
+It is formed by a circle in the $\theta$-direction and a circle in the $u_ru_\theta$-plane
+
+On $\Lambda$ the system reduces to
+
+$\dot \theta = u_\theta$
+
+$\dot u_r = \frac{1}2u_\theta^2$
+
+$\dot u_\theta - \frac{1}2u_ru_\theta$ 
+
+where we have used the energy relation to simplify $\dot u_r$ 
+
+Analyzing the system:
+
+$\dot u_r > 0$ provided $u_\theta \neq 0$ 
+
+$\implies$ $u_r$ must increase along any solution in $\Lambda$ with $u_\theta \neq 0$ 
+
+with $u_\theta = 0$, the system has equilibrium points
+
+there are two circles of equilibria:
+
+$u_\theta = 0$, $u_r = \sqrt{2}$, $\theta$ arbitrary
+
+$u_\theta = 0$, $u_r = -\sqrt{2}$, $\theta$ arbitrary
+
+Let $C^\pm$ denote these two circle with $u_r = \pm \sqrt{2}$ on $C^\pm$ 
+
+Note: I don't understand how these are circles
+
+Ok I get it now:
+
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Torus_cycles.svg/512px-Torus_cycles.svg.png)
+
+the red circle is the $u_ru_\theta$
+
+the magenta is the "'$\theta$'" I believe
+
+so $C^-$ will be a magenta circle of some sort, probably on the inner part of the torus
+
+$C^+$ will be on the outer part probably 
+
+All other solutions must travel from $C^-$ to $C^+$ since $u_r$ increases along solutions 
+
+---
+
+To fully understand the flow on $\Lambda$ we introduce the angular variable $\psi$ in each $u_ru_\theta$ plane via:
+
+$u_r = \sqrt{2}\sin \psi \\ u_\theta = \sqrt{2}\cos \psi$ 
+
+The torus is now parameterized by $\theta$ and $\psi$ 
+
+($\theta$ dictates the angle on the bigger circle, $\psi$ dictate the angle on the inner circle(s))
+
+In $\theta\psi$-coordinates, the system becomes
+
+$\dot \theta = \sqrt{2}\cos \psi \\ \dot \psi = \frac{1}{\sqrt{2}}\cos \psi$ 
+
+The circles $\C^\pm$ are now given by $\psi \pm \pi/2$ 
+
+Eliminating time from this equation:
+
+$\frac{d\psi}{d\theta} = \frac{1}{2}$ 
+
+Nonequilibrium solution have constant slope $1/2$ when viewed in $\theta\psi$ coordinates
+
+it seems to me that solutions wind about the torus at an angular rate of $1/2$ as we go around the bigger circle in the $\theta $ direction
+
+---
+
+Recall collision-ejection solutions from 13.4
+
+1. each solution leaves origin
+2. then returns along a ray $\theta = \theta^*$
+
+The solution departs with $v_r > 0$ and so $u_r > 0$ 
+
+the solution returns with $v_r < 0$ and so $u_r < 0$ 
+
+In our new four-dim coordinate system:
+
+this solution forms an unstable curve associated with equilibrium point $(0, \theta^*, \sqrt{2}, 0)$ 
+
+and a stable curve associated with $(0, \theta^*, -\sqrt{2}, 0)$ 
+
+---
+
+What happens to nearby noncollision solutions?
+
+they come close to the "lower" equilibrium point with $\theta = \theta^*$, $u_r = -\sqrt{2}$ 
+
+then follow one of two branches of the unstable curve through this point up to the "upper" equilibrium point $\theta = \theta^*$ , $u_r = \sqrt{2}$ 
+
+then depart near the unstable curve leaving this equilibrium
+
+Interpreting this motion in configuration space, we see that each near-collision solution approaches the origin and then retreats after $\theta$ either increases or decreases by $2\pi$ units
