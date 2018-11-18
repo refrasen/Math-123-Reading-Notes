@@ -325,5 +325,70 @@ which means$\frac{d}{dt}|\gamma(t)|^2 = \frac{d}{dt}\text{constant}$ $= 0$
 
 #### Proposition. A particle moving in a central force field in $\R^3$ always moves in a fixed plane
 
-Proof: $X(t)$ is the path of a particle moving under the influence of a central force field.
+Proof: 
 
+$X(t)$ is the path of a particle moving under the influence of a central force field.
+
+$\frac{d}{dt}(X\times V) = V\times V + X \times V'$ $= 0 + X \times X'' = 0$
+
+since $X''$ is a scalar multiple of $X$: $X'' = V' = \frac{1}{m}F(X) = \frac{1}{m}\lambda(X)X$
+
+Therefore, $Y = X(t)\times V(t)$ is a constant vector w.r.t. $t$ 
+
+If $Y \neq 0$, this means that $X$ and $V$ **always** lie in the plane orthogonal to $Y$, which proves the proposition. (always because $Y$ is constant for any $X(t), V(t)$)
+
+If $Y = 0$, this means that $X'(t) = g(t)X(t)$ for some real function $g(t)$
+
+$\implies$ the velocity vector of the moving particle is always directed along the line through the origin and the particle, as is the force on the particle
+
+$\equiv$ the particle moves along the same line through the origin
+
+Proof of this fact:
+
+$(x_1(t), x_2(t), x_3(t))$: coordinates of $X(t)$ 
+
+three separable differential equations
+
+$\frac{dx_k}{dt} = g(t)x_k(t)$, for $k = 1, 2, 3$ 
+
+Integrating, $x_k(t) = e^{h(t)}x_k(0)$, where $h(t) = \int_0^t g(s)ds$ 
+
+Therefore: $X(t)$ is a scalar multiple of $X(0)$, and so $X(t)$ moves in a fixed line and thus a fixed plane
+
+---
+
+##### angular momentum of the system: $m(X \times V)$, $m = $ mass of particle
+
+##### Corollary (Conservation of Angular Momentum): Angular momentum is constant along any solution curve in a central force field
+
+This comes straight from the proof of the preceding proposition, where we have $\frac{d}{dt}(X\times V) = 0$ 
+
+---
+
+#### Conservative Central Force Fields and Angular Momentum ($\R^3$) 
+
+the particle remains for all time in a plane, which we can take to be $x_3 = 0$ (for simplicity, and I believe we can use change of variables to make it this way anyway)
+
+##### angular momentum is given by the vector: $(0, 0, m(x_1v_2 - x_2v_1))$
+
+since $x_3 = 0$ and I believe, $v_3 = 0$, since the particle must remain in the plane $x_3 = 0$ 
+
+##### $l = m(x_1v_2 - x_2v_1)$  
+
+* the function $l$ is constant along solutions since the angular momentum is constant along solutions
+
+* In the planar case, $l$ is called the angular momentum
+
+Using polar coordinates: $x_1 = r\cos\theta$, $x_2 = r \sin \theta$ 
+
+$v_1 = x_1' = r'\cos\theta - r\sin\theta\theta'\\ v_2 = x_2' = r'\sin\theta + r\cos\theta \theta'$  
+
+Then:
+
+$x_1v_2 - x_2v_1 = r\cos\theta(r'\sin\theta + r\cos\theta \theta') - r\sin(r'\cos \theta - r\sin\theta \theta ') = r^2(\cos^2\theta + \sin^2\theta)\theta' = r^2\theta'$ 
+
+so in polar coordinates: $l = mr^2\theta'$
+
+---
+
+#### Proof: One of Kepler's Laws
