@@ -516,7 +516,7 @@ If $|X| > -1/h$ $\implies$ there are no vectors in $T_X \cap \Sigma_h$
 
 If $|X| = -1/h$ $\implies$ only the zero vector in $T_X$ 
 
-​	The circle $r = -1/h$ in configuration space is therefore known as the zero velocity curve
+​	The circle $r = -1/h$ in configuration space is therefore known as the **zero velocity curve**
 
 ​	as for any $X$, such that $|X| = r$, we must have $V = 0$ in order for $E(X, V) = h$  
 
@@ -578,6 +578,82 @@ we have $|X| = r$, and $|V|^2 = v_r^2\cos^2\theta + v_r^2 \sin^2\theta + v_\thet
 
 angular momentum, $l = mr^2\theta'$, now equals, with $m =1$
 
-$l = rv_\theta$ 
+##### $l = rv_\theta$ 
 
-##### 
+---
+
+Let $\Sigma_{h,l}$ consist of all points in phase space with total energy $h$ and angular momentum $l$
+
+For simplicity, we will restrict attention to the case where $h < 0$ 
+
+**If $l = 0$, we must have $v_\theta = 0$ $\implies \theta' = 0$ ** 
+
+$\implies$ if $X$ lies *inside* the zero velocity curve, the tangent space at $X$ meets $\Sigma_{h, 0}$ in precisely two vectors of the form
+
+$\pm v_r(\cos \theta, \sin \theta)$, both of which lie on the line connecting $0$ and $X$, one point towards $0$, the other pointing away
+
+On the zero velocity curve, with $|X| = -1/h$, only the zero vector (I'm assuming, we are pointing out the obvious $V = 0$) lies in $\Sigma_{h,0}$.
+
+$\implies$ Each solution in $\Sigma_{h,0}$ lies on a straight line through origin (why? cause of the above):
+
+The solution leaves origin and travels along a straight line until reaching the zero velocity curve, after which time it recedes back to the origin(!)
+
+The vectors in $\Sigma_{h, 0}$ have magnitude tending to $\infin$ as $X \rightarrow 0$ (from earlier discussion, before polar coordinates)$\implies$ these solutions reach the singularity in finite time in both directions (t negative, t positive?). These solutions are called:
+
+##### collision-ejection orbits
+
+**If $l \neq 0$**
+
+If $X$ lies in the zero velocity curve, we have $v_\theta = l/r$ $\implies$
+
+Using $E(v_r, v_\theta)$, 
+
+$r^2v_r^2 = 2hr^2 + 2r - l^2$ $(*)$
+
+The quadratic polynomial in $r$ on the right in Equation $(*)$ must therefore be nonegative
+
+$\implies$ we have restrictions on which $r-$values can occur for $X \in \Sigma_{h,l}$
+
+The graph of this quadratic polynomial is concave down since $h < 0$:
+
+* first derivative w.r.t. $r$?: $4hr + 2$, it is equal to $0$ when $r = 2/(4|h|)$
+  * when $r < 2/(4|h|)$, $4hr + 2 > 0$
+  * and $r > 2/(4|h|)$ $\implies$ $4hr < -2$ $\implies$ $4hr + 2 < 0$ 
+  * so we have a maximum at $r = 2/(4|h|)$
+* second derivative: $4h < 0$, which means the rate of change decreases as $r \rightarrow \infin+$ 
+
+**It has no real roots if $l^2 > -1/2h$**
+
+$\implies$ there's no point at which the right hand side of $(*)$ $= 0$
+
+and concave down means that the right hand side remains negative the whole time, but we need nonnegative values
+
+Therefore: the space $\Sigma_{h,l}$ is empty in this case
+
+**If $l^2 = -1/2h$, we have a single root that occurs at $r = -1/2h$**
+
+Therefore: only one $r$-value in $\Sigma_{h,l}$ 
+
+In the tangent plane at $(r, \theta)$:
+
+$v_r = 0$, because $r \neq 0$ and $(*) = 0$ when $r = -1/2h$ $\implies$ $r$ doesn't change, so we remain in a circle
+
+$v_\theta = -2hl$ (since earlier we said $v_\theta = l/r$)
+
+So this represents a circular closed orbit, traversed clockwise if $l < 0$, counterclockwise if $l > 0$ 
+
+**If $l^2 < -1/2h$**: two distinct roots, $\alpha, \beta$
+
+$\alpha < -1/2h < \beta$ and $\alpha > 0$ (since $-b/2a$ in this case is positive)
+
+Let $A_{\alpha, \beta}$: be the annular region $\alpha \leq r \leq \beta$ in the configuration space
+
+Motion in configuration space is confined to $A_{\alpha, \beta}$ (as this is the only time when the right hand side of $(*)$ is nonnegative, assuming we still want $E(v_r, v_\theta) = h$)
+
+#### Proposition
+
+Suppose $h < 0$ and $l^2 < -1/2h$. Then $\Sigma_{h,l} \sub P$ is a two dimensional torus
+
+Proof:
+
+Just read in page 289
