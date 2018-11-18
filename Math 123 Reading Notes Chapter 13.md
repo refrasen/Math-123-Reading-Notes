@@ -420,4 +420,70 @@ Ending notes:
 
 ### 13.4 The Newtonain Central Force System
 
+#### Setting up the system:
+
 * this system deals with the motion of a single planet orbiting the sun
+* Assume the sun is fixed at the origin in $\R^3$ and that the relatively small planet exerts no force on the sun
+* sun exerts a force on a planet given by *Newton's law of gravitation* $\equiv$ *inverse square law* 
+  * the sun exerts a force on the planet located at $X \in \R^3$ with a magnitude that is $gm_sm_p/r^2$ 
+    * $m_s$ is the mass of the sun
+    * $m_p$ is the mass of the planet
+    * $g$ is the gravitational constant
+  * The direction of the force is towards the sun
+* Newton's law yields $m_pX'' = -gm_sm_p \frac{X}{|X|^3}$
+  * $X'' = -gm_s\frac{X}{|X|^3}$ 
+* We change units so that constants are normalized to one and the equation becomes:
+
+$X'' = F(X) = -\frac{X}{|X|^3}$ 
+
+* $F(X)$ is now the force field
+
+As a system:
+
+##### $X' = V \\ V' = -\frac{X}{|X|^3}$ 
+
+This system is called the **Newtonian central force system**
+
+---
+
+#### It is a central force field and it is conservative
+
+since $\frac{X}{|X|^3} = \text{grad }U(X)$ 
+
+With Potential Energy: $U(X) = -\frac{1}{|X|}$
+
+$ = -\frac{1}{\sqrt{x_1^2 +  . . . + x_3^2}}$ 
+
+so deriving w.r.t. to $x_i$ 
+
+we have three basic function: $1/x$, $\sqrt{x}$ and $x^2$ 
+
+$\frac{1}{x_1^2 + . . . + x_3^2}\frac{1}{2\sqrt{x_1^2+. . . + x_3^2}}2x_i$
+
+$= \frac{x_i}{|X|^3}$ , 
+
+##### $F(X)$ is not defined at $0$: the force field becomes infinite as the moving mass approaches collision with the stationary mass at the origin
+
+---
+
+We restrict our attention to particles moving in the plane $\R^2$ (as in the previous section)
+
+So, we look at solutions in the 
+
+##### configuration space $C = \R^2 - ${$0$}
+
+We denote the 
+
+##### phase space by $P = (\R^2 - ${$0$})$\times \R^2$ 
+
+We visualize phase spaces as the collection of all tangent vectors at each point $X \in C$ 
+
+##### Tangent plane to the configuration space at $X$: $T_{X} = ${$(X,V)| V \in \R^2$}
+
+##### $P = \cup_{X \in C} T_X$ is the tangent space to the configuration space, a subset of $\R^4$ 
+
+##### The dimension of the phase space is four
+
+we can cut this dimension in half by making use of the two known first integrals: total energy and angular momentum
+
+##### 
