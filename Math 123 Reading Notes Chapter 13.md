@@ -486,4 +486,45 @@ We visualize phase spaces as the collection of all tangent vectors at each point
 
 we can cut this dimension in half by making use of the two known first integrals: total energy and angular momentum
 
-##### 
+Recall:
+
+First, that energy is constant
+
+second, that $E(X,V) = K(V) + U(X) = \frac{1}{2}|V|^2 - \frac{1}{|X|}$ 
+
+Let $\Sigma_h$ denote the subset of $P$ consisting of all points $(X,V)$ with $E(X,V) = h$ 
+
+##### $\Sigma_h$ is called the energy surface with total energy $h$ 
+
+###### If $h \geq 0$
+
+then $\Sigma_h$ meets each $T_X$ in a <u>circle of tangent</u> vectors satisfying
+
+$|V|^2 = 2(h + \frac{1}{|X|})$ 
+
+The radius of these circles in the tangent plane at $X$ tends to $\infin$ as $X \rightarrow 0$ and decreases to $2h$ as $|X| \rightarrow \infin$ 
+
+Note: Is it a circle because of the whole, $V'$ depends on $F(X)$, which in a conservative central force field like this one depends on $|X|$? I honestly don't know. Or is it because $E$, when $X$ is fixed, depends on $|V|^2$?
+
+###### If $h < 0$ 
+
+the structure of the energy surface $\Sigma_h$ is different
+
+If $|X| > -1/h$ $\implies$ there are no vectors in $T_X \cap \Sigma_h$ 
+
+​	$-|h| + 1/|X| < -|h| + |h|  = 0$, so impossible for $|V|^2$ to equal such a number
+
+If $|X| = -1/h$ $\implies$ only the zero vector in $T_X$ 
+
+​	The circle $r = -1/h$ in configuration space is therefore known as the zero velocity curve
+
+​	as for any $X$, such that $|X| = r$, we must have $V = 0$ in order for $E(X, V) = h$  
+
+​	if $X$ lies inside the zero velocity curve, then $T_X$ meets the energy surface in a circle of tangent vectors as before
+
+---
+
+#### Polar Coordinates in configuration space, new variables $(v_r, v_\theta)$ 
+
+$V = v_r\begin{pmatrix} \cos\theta \\ \sin \theta\end{pmatrix} + v_\theta\begin{pmatrix} - \sin \theta \\ \cos\theta \end{pmatrix}$ 
+
